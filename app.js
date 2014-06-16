@@ -30,4 +30,9 @@ app.get('/', function (req, res) {
   )
 })
 
+app.use('/', function(req, res) {
+    res.render(req.url.replace('/', ''));
+});
+
+
 app.listen(3000)
