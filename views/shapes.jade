@@ -1,11 +1,19 @@
 extend layout
+include helper/preprint
 
 
+block header
+    | Shapes
 block content
-	.row  
-		h3 Basic SVG
-		include code/basic_svg.html
-	.row 
-		code 
-			include code/basic_svg.html
 
+    +preprint('Rectangle:','<svg width="50" height="50"><rect x="0" y="0" width="50" height="50" fill="green" /></svg>')
+
+    +preprint('Circle:','<svg width="50" height="50"><circle cx="25" cy="25" r="25" fill="purple" /></svg>')
+
+    +preprint('Ellipse:','<svg width="50" height="50"><ellipse cx="25" cy="25" rx="15" ry="10" fill="red" /></svg>')
+
+    +preprint('Straight Line:','<svg width="50" height="50"><line x1="5" y1="5" x2="40" y2="40" stroke="gray" stroke-width="5"  /></svg>')
+
+    +preprint('Polyline:','<svg width="50" height="50"><polyline fill="none" stroke="blue" stroke-width="2" points="05,30 15,30 15,20 25,20 25,10 35,10" /></svg>')
+
+    +preprint('Polygon:','<svg width="50" height="50"><polygon fill="yellow" stroke="blue" stroke-width="2" points="05,30 15,10 25,30" /></svg>')

@@ -1,21 +1,19 @@
 doctype html
-html.no-js
+html(lang="en")
   head
     meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Clarice d3js demo
-    meta(name="description", content="")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="css/bootstrap.min.css")
-    style
-      body {
-      padding-top: 50px;
-      padding-bottom: 20px;
-      }
-    link(rel="stylesheet", href="css/bootstrap-theme.min.css")
-    link(rel="stylesheet", href="css/main.css")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    title D3js Demo for Clarice
+    // Bootstrap core CSS
+    link(href="/css/bootstrap.min.css", rel="stylesheet")
+    // Custom styles for this template
+    link(href="/css/sticky-footer-navbar.css", rel="stylesheet")
   body
-    .navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+    // Fixed navbar
+    .navbar.navbar-default.navbar-fixed-top(role="navigation")
       .container
         .navbar-header
           button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
@@ -23,13 +21,17 @@ html.no-js
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href="#") Clarice d3js demo
-        // /.navbar-collapse
-    // Main jumbotron for a primary marketing message or call to action
+          a.navbar-brand(href="#") D3js Demo for Clarice
+        // /.nav-collapse
+    // Begin page content
     .container
+      .page-header
+        h2
+          block header
       block content
-
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js")
-    script(src="js/vendor/bootstrap.min.js")
-    script(src="js/main.js")
-    script(src="js/d3.v3.min.js")
+    #footer
+      .container
+        p.text-muted
+        | Sethuraman S (sethuraman.subramanian@claricetechnologies.com) Skype: sethu_the_knight
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+    script(src="/js/bootstrap.min.js")
